@@ -1,7 +1,10 @@
 # fcalbrecht.github.io
 
 
-[Case Study 01: Cyclistic](https://github.com/fcalbrecht/fcalbrecht.github.io/blob/41ce72d92e6e9f05b7a5418c030c1df491c7a370/Cyclistic)
+First data analysis case study.
+
+#Cyclistic
+
 
 
 How do annual members and casual riders use Cyclistic bikes differently?
@@ -9,21 +12,27 @@ How do annual members and casual riders use Cyclistic bikes differently?
  
 1.    A clear statement of the business task 
 2.    A description of all data sources used 
-3.    Documentation of any cleaning or manipulation of data 
-4.    A summary of your analysis 
-5.    Supporting visualizations and key findings 
-6.    Your top three recommendations based on your analysis 
+3.    A summary of your analysis 
+4.    Supporting visualizations and key findings 
+5.    Your top three recommendations based on your analysis 
+6.    Documentation of any cleaning or manipulation of data 
 
 1 - Business task
 How do annual members and casual riders use Cyclistic bikes differently?
+
 2.    A description of all data sources used 
 The data sources used were from Divvy bicycle sharing service. I downloaded one year of data. 
 Divvy_Trips_2020_Q1.zip  - 426887 rows
 Divvy_Trips_2019_Q4.zip  - 704054 rows
 Divvy_Trips_2019_Q3.zip  - 1640718 rows
  Divvy_Trips_2019_Q2.zip  - 1108163 rows 
+ 
+ 3.    A summary of your analysis 
+ 
+ 
+ 
 
-3.    Documentation of any cleaning or manipulation of data 
+6.    Documentation of any cleaning or manipulation of data 
 
 To examine and clean the Data I used Kevin Hartman script with some changes. Kevin's Harman script can be found here: https://artscience.blog/home/divvy-dataviz-case-study or here: https://docs.google.com/document/d/1TTj5KNKf4BWvEORGm10oNbpwTRk1hamsWJGj6qRWpuI/edit
 ```r
@@ -264,4 +273,3 @@ all_trips_v2 %>%
 counts <- aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_trips_v2$day_of_week, FUN = mean)
 write.csv(counts, file = '~/Desktop/Divvy_Exercise/avg_ride_length.csv')
 ``` 
-
